@@ -1,0 +1,122 @@
+/*
+ Theme Name:   Twenty Fourteen Libraries
+ Theme URI:    
+ Description:  Twenty Fourteen Child Theme
+ Author:       TIS
+ Author URI:   http://www.lib.utexas.edu
+ Template:     twentyfourteen
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-fourteen-libraries
+*/
+
+/*
+For older themes, and themes that do not use wp_enqueue_style() to enqueue their stylesheet, use the following line where twentyfourteen is the name of the directory where the theme resides:
+
+Make sure you uncomment out this import line below if you want to include the parent CSS and the wp_enqueue_style() is not working. If you do not then you will not have any styling in your child theme from the parent theme.
+*/
+
+
+@import url("../twentyfourteen/style.css");
+
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+/**
+ * 4.0 Header
+ * -----------------------------------------------------------------------------
+ */
+.header-first {
+	background-color: #fff;
+	max-width: 1260px;
+	height: 34px;
+	position: relative;
+	width: 100%;
+	z-index: 3;
+}
+
+
+.header-second {
+	background-color: #BF5700;
+	max-width: 1260px;
+	height: 28px;
+	position: relative;
+	width: 100%;
+	z-index: 3;
+}
+/* Position UT Blogs link at right side of header */
+.header-second-right {
+	float: right;
+	color: #fff;
+	padding: 0 20px;
+	line-height: 28px;
+	}
+.header-second-right a,
+.header-second-right a:hover {
+	color: #fff;
+}
+.site-title {
+    letter-spacing: +2px;
+    font-size: 150%;
+}
+
+/* Fix the position of the masthead that gets broken by the addition of the UT and Libraries headers at the top. */
+@media screen and (min-width: 783px) {
+	/* Fixed Header */
+
+	.masthead-fixed .site-header {
+		position: relative;
+		top: 0;
+	}
+
+	.admin-bar.masthead-fixed .site-header {
+		top: 32px;
+	}
+
+	.masthead-fixed .site-main {
+		margin-top: 112px;
+	}
+
+/* Search in the header */
+
+.search-box-wrapper {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+	position: absolute;
+	top: 110px;
+	z-index: 3;
+}
+
+
+/**************************
+	Footer & Bottom Bar
+**************************/
+.footer-bar a { 
+	color: rgb(256,256,256); 
+	font-weight: bold; 
+}
+#footer-lib-links { background-color: rgb(0,0,0); border-top: none;}
+.footer-bar { 
+	background-color: rgb(151,151,151); 
+	border-top: 1px solid rgb(129,129,129); 
+	color: #666;
+	padding: 0 1em;
+	line-height: 2.2em;
+	text-align: right;
+}
+#supplementary { background-color: rgb(240,240,240); }
+ul.footerbar { margin: 0; }
+.footerbar li { display: inline; list-style-type: none; padding: 0 1.25em;}
+.liblinks-list { list-style-type: none; }
+/*.liblinks-list li:before { content: '\00BB \0020'; }*/
+[data-icon]:before {
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin-right: .5em;
+}
+
